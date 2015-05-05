@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="Keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="Description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<title><{$xoops_sitename}>-<{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_themecss}>" />
+<script type="text/javascript" src="<{$xoops_imageurl}>corners.js"></script>
+<script type="text/javascript">
+	window.onload=function(){
+	if(!NiftyCheck())
+    	return;
+			Rounded("div#topbar","#a1c4de","#ffffff");
+			Rounded("div#userbar","#a1c4de","#ffffff");
+			Rounded("div#contentcorner","#a1c4de","#ffffff");
+}
+</script>
+
+		<link rel="stylesheet" type="text/css" href="<{$xoops_imageurl}>Corners.css" />
+		<link rel="stylesheet" type="text/css" href="<{$xoops_imageurl}>Print.css" media="print" />
+</head>
+
+<body>
+<div id="topbar">
+<table id="imgbar" align="left">
+  <tr>
+    <td align="left"><img src="<{$xoops_imageurl}>images/logo.gif" width="200" height="90" id="logo" /></td>
+    <td align="right"><img src="<{$xoops_imageurl}>images/logo2.gif" width="195" height="41" id="logo" /></td>
+  </tr>
+</table>
+</div>
+<br />
+<div id="userbar">
+<{if $xoops_isuser}><b>Welcome <i><{$xoops_uname}></i> to KickassAMD!</b> | <a href="<{$xoops_url}>/user.php?op=logout">Logout</a> ~ <a href="<{$xoops_url}>/user.php">Profile</a><{else}> <a href="<{$xoops_url}>/register.php">Register</a> &nbsp;~&nbsp; <a href="<{$xoops_url}>/user.php">Lost Password</a> <{/if}>
+</div>
+<div id="contentcorner">
+<table width="100%" border="0" align="center">
+  <tr>
+    <td rowspan="8" id="leftcolumn"><{foreach item=block from=$xoops_lblocks}> <{include file="aqua/blockleft.html"}> <{/foreach}> </td>
+    <td colspan="2" id="centercolumn"><div align="center"><{if $xoops_showcblock == 1}></div></td>
+    <td rowspan="8" id="rightcolumn"><{foreach item=block from=$xoops_rblocks}> <{include file="aqua/blockright.html"}> <{/foreach}></td>
+  </tr>
+  <tr>
+    <td colspan="2" id="centerCcolumn"><div align="center"><{foreach item=block from=$xoops_ccblocks}> <{include file="aqua/block_center.html"}> <{/foreach}> </div></td>
+    </tr>
+  <tr>
+    <td id="centerLcolumn"><div align="center"><{foreach item=block from=$xoops_clblocks}> <{include file="aqua/block_cleft.html"}> <{/foreach}></div></td>
+    <td id="centerRcolumn"><div align="center"><{foreach item=block from=$xoops_crblocks}> <{include file="aqua/block_cright.html"}> <{/foreach}></div></td>
+    </tr>
+  <tr>
+    <td colspan="2"><{/if}></td>
+    </tr>
+  <tr>
+    <td colspan="2"><div id="contents"><{$xoops_contents}></div></td>
+    </tr>
+  <tr>
+    <td colspan="2" id="bottom">&nbsp;</td>
+  </tr>
+</table>
+<br clear="all" />
+<div align="center"><{$xoops_footer}>
+</div>
+</div>
+</body>
+</html>		
